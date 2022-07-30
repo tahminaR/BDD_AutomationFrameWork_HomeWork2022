@@ -1,0 +1,7 @@
+
+@RegressionTest
+Scenario: SearchBox functionality should work with a valid product name # src/test/java/features/SearchBox.feature:7
+  Given user is landed on amazon homepage                               # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
+  And user should be able to enter valid product name                   # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValidProductName()
+  When user should be able to click on search button                    # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
+  Then user should see the valid product appears                        # stepdefinitions.SearchBoxSteps.userShouldSeeTheValidProductAppears()
