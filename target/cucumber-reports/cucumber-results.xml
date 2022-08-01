@@ -1,67 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="5" time="113.82">
-    <testcase classname="SearchBox Functionality" name="checking Amazon search box functionality using valid products name" time="23.659">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="41.294">
+    <testcase classname="SearchBox Functionality" name="Amazon SearchBox functionality should have menu" time="40.952">
         <system-out>
             <![CDATA[Given user is landed on amazon homepage.....................................passed
-And user should be able to enter valid "Bluetooth earbuds"..................passed
+And user should be able to click on "all" drop down list in the searchBox...passed
+And user should be able to click on "Alexa Skills" link.....................passed
 And user should be able to click on search button...........................passed
-And user should be able to click on Free Shipping by Amazon.................passed
-And user should be able to enter Minimum price in price edit field..........passed
-And user should be able to enter Maximum price in price edit field..........passed
-When users should be able to click on Go button.............................passed
-Then users should able to see "Bluetooth earbuds" displayed.................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="SearchBox Functionality" name="checking Amazon search box functionality using valid products name 2" time="22.56">
-        <system-out>
-            <![CDATA[Given user is landed on amazon homepage.....................................passed
-And user should be able to enter valid "air purifier".......................passed
-And user should be able to click on search button...........................passed
-And user should be able to click on Free Shipping by Amazon.................passed
-And user should be able to enter Minimum price in price edit field..........passed
-And user should be able to enter Maximum price in price edit field..........passed
-When users should be able to click on Go button.............................passed
-Then users should able to see "air purifier" displayed......................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="SearchBox Functionality" name="checking Amazon search box functionality using valid products name 3" time="22.75">
-        <system-out>
-            <![CDATA[Given user is landed on amazon homepage.....................................passed
-And user should be able to enter valid "Coffee Gator Espresso Machine"......passed
-And user should be able to click on search button...........................passed
-And user should be able to click on Free Shipping by Amazon.................passed
-And user should be able to enter Minimum price in price edit field..........passed
-And user should be able to enter Maximum price in price edit field..........passed
-When users should be able to click on Go button.............................passed
-Then users should able to see "Coffee Gator Espresso Machine" displayed.....passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="SearchBox Functionality" name="checking Amazon search box functionality using valid products name 4" time="22.999">
-        <system-out>
-            <![CDATA[Given user is landed on amazon homepage.....................................passed
-And user should be able to enter valid "airpods pro case"...................passed
-And user should be able to click on search button...........................passed
-And user should be able to click on Free Shipping by Amazon.................passed
-And user should be able to enter Minimum price in price edit field..........passed
-And user should be able to enter Maximum price in price edit field..........passed
-When users should be able to click on Go button.............................passed
-Then users should able to see "airpods pro case" displayed..................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="SearchBox Functionality" name="checking Amazon search box functionality using valid products name 5" time="21.49">
-        <system-out>
-            <![CDATA[Given user is landed on amazon homepage.....................................passed
-And user should be able to enter valid "speaker home theater system"........passed
-And user should be able to click on search button...........................passed
-And user should be able to click on Free Shipping by Amazon.................passed
-And user should be able to enter Minimum price in price edit field..........passed
-And user should be able to enter Maximum price in price edit field..........passed
-When users should be able to click on Go button.............................passed
-Then users should able to see "speaker home theater system" displayed.......passed
+When user hover the mouse on "Features and Skills" link.....................passed
+And user can select "Entertainment" from the list...........................passed
+Then user should see the "Alexa Entertainment" displayed....................passed
 ]]>
         </system-out>
     </testcase>

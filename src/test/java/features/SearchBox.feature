@@ -3,14 +3,14 @@ Feature: SearchBox Functionality
   Background:
     Given user is landed on amazon homepage
 
-  @RegressionTest @pending
+  @RegressionTest @pending1
   Scenario: SearchBox functionality should work with a valid product name
     And user should be able to enter valid product name
     When user should be able to click on search button
     Then user should see the valid product appears
 
 
- @pending
+  @pending2
   @RegressionTest
   Scenario: SearchBox functionality should not work with a Invalid product name
     And user should be able to enter invalid product name
@@ -18,7 +18,7 @@ Feature: SearchBox Functionality
     Then user should see the partial matched product appears
 
 
-  @RegressionTest
+  @RegressionTest @pending3
   Scenario Outline: checking Amazon search box functionality using valid products name
     And user should be able to enter valid "<productName>"
     And user should be able to click on search button
@@ -36,22 +36,38 @@ Feature: SearchBox Functionality
       | speaker home theater system   |
 
 
-
-
-  @RegressionTest @pending
+  @RegressionTest @pending4
   Scenario Outline: SearchBox functionality should work with a valid product name using Scenario outline
     And user enter valid "<productName>" products name
     When user should be able to click on search button
     Then user should see the valid "<expectedProduct>" products appears
 
     Examples:
-      | productName    | expectedProduct |
-      | WATCHES        | WATCHES         |
-      | JEWELRY        | JEWELRY         |
-      | HANDBAGS       | HANDBAGS        |
+      | productName | expectedProduct |
+      | WATCHES     | WATCHES         |
+      | JEWELRY     | JEWELRY         |
+      | HANDBAGS    | HANDBAGS        |
 
 
+  @RegressionTest @pending5
+  Scenario Outline:  SearchBox functionality should work with a valid product name
+    And user enter "HANDBAGS" valid product name
+    When user should be able to click on search button
+#    Then user should see "HANDBAGS" the valid product appears
+    Then users should able to see "<productName>" displayed
+    Examples:
+      | productName |
+      | HANDBAGS    |
 
+
+  @RegressionTest
+  Scenario: Amazon SearchBox functionality should have menu
+    And user should be able to click on "all" drop down list in the searchBox
+    And user should be able to click on "Alexa Skills" link
+    And user should be able to click on search button
+    When user hover the mouse on "Features and Skills" link
+    And user can select "Entertainment" from the list
+    Then user should see the "Alexa Entertainment" displayed
 
 
 

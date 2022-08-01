@@ -194,8 +194,13 @@ public class GlobalReUsableMethods extends WebTestBase {
         return driver.getCurrentUrl();
     }
 
-
     public static void mouseHoverByXpath(String locator) {
+        WebElement element = driver.findElement(By.xpath(locator));
+        Actions action = new Actions(driver);
+        action.moveToElement(element).perform();
+    }
+
+    public static void mouseHoverByXpath1(String locator) {
         WebElement element = driver.findElement(By.xpath(locator));
         Actions action = new Actions(driver);
         try {

@@ -70,7 +70,8 @@ public class SearchBoxSteps extends WebTestBase {
         System.out.println("***************************verified product:********************** " + expectedProduct);
         System.out.println("***************************verified product:********************** " + expectedProduct);
     }
-//==============================================================================================================================
+
+    //==============================================================================================================================
     @And("user should be able to enter valid {string}")
     public void userShouldBeAbleToEnterValid(String productName) {
         searchBox.enterValidProductNameInSearchBoxFunctionality(productName);
@@ -102,10 +103,50 @@ public class SearchBoxSteps extends WebTestBase {
         verifyText(searchBox.verifyAllProductsDisplayed, "\"" + productName + "\"", "Product name does not match");
         waitFor(6);
     }
+
+    //=====================================================================================================================
+    @And("user enter {string} valid product name")
+    public void userEnterValidProductName(String productName) {
+        searchBox.enterValidProductNameInSearchBoxFunctionality(productName);
+    }
+
+    @Then("user should see {string} the valid product appears")
+    public void userShouldSeeTheValidProductAppears(String productName) throws InterruptedException {
+        verifyText(searchBox.verifySearchProduct, productName, "text does not match");
+        waitFor(3);
+    }
+
+    //======================================================================================================
+    @And("user should be able to click on {string} drop down list in the searchBox")
+    public void userShouldBeAbleToClickOnDropDownListInTheSearchBox(String stringValue) throws InterruptedException {
+        searchBox.clickOnAllDropDownListMenu();
+        waitFor(4);
+    }
+
+    @And("user should be able to click on {string} link")
+    public void userShouldBeAbleToClickOnLink(String stringValue) throws InterruptedException {
+        searchBox.clickOnAlexaSkillsLink();
+        waitFor(5);
+    }
+
+    @When("user hover the mouse on {string} link")
+    public void userHoverTheMouseOnLink(String stringValue) throws InterruptedException {
+        searchBox.HoverTheMouseOnFeaturesAndSkillsLink();
+        waitFor(3);
+    }
+
+    @And("user can select {string} from the list")
+    public void userCanSelectFromTheList(String stringValue) throws InterruptedException {
+        searchBox.userCanSelectEntertainmentFromTheList();
+        waitFor(5);
+    }
+
+    @Then("user should see the {string} displayed")
+    public void userShouldSeeTheDisplayed(String stringValue) throws InterruptedException {
+        verifyText(searchBox.verifyAlexaEntertainmentDisplayed, "Alexa Entertainment", "text does not match");
+        waitFor(3);
+    }
     //=========================================================================
-
-
-
 
 
 }

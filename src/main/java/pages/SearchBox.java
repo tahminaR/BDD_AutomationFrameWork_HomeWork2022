@@ -5,8 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static configuration.common.GlobalReUsableMethods.clickOnElement;
-import static configuration.common.GlobalReUsableMethods.enterValueOnElement;
+import static configuration.common.GlobalReUsableMethods.*;
+
 import static elements.SearchBoxElement.*;
 
 public class SearchBox extends WebTestBase {
@@ -26,7 +26,6 @@ public class SearchBox extends WebTestBase {
     @FindBy(xpath = userShouldSeePartialMatchedProductWebElements)
     public WebElement userShouldSeePartialMatchedProduct;
     //================================================================================================
-
     @FindBy(xpath = clickOnFreeShippingByAmazonCheckBoxWebElement)
     public WebElement clickOnFreeShippingByAmazonCheckBox;
     @FindBy(xpath = enterMinimumPriceInPriceEditFieldWebElement)
@@ -38,19 +37,27 @@ public class SearchBox extends WebTestBase {
     @FindBy(xpath = verifyAllProductsDisplayedProperly)
     public WebElement verifyAllProductsDisplayed;
 
+//====================================================================================================
+@FindBy(xpath = userShouldBeAbleToClickOnAllDropDownListWebElement)
+public WebElement userShouldBeAbleToClickOnAllDropDownList;
+  @FindBy(xpath = userShouldBeAbleToClickOnAlexaSkillsLinkWebElement)
+public WebElement userShouldBeAbleToClickOnAlexaSkillsLink;
+@FindBy(xpath = userHoverTheMouseOnFeaturesAndSkillsLinkWebElement)
+public WebElement userHoverTheMouseOnFeaturesAndSkillsLink;
+  @FindBy(xpath = userCanSelectEntertainmentFromTheListWebElement)
+public WebElement userCanSelectEntertainmentFromTheList;
+  @FindBy(xpath = verifyAlexaEntertainmentDisplayedOnThePage)
+public WebElement verifyAlexaEntertainmentDisplayed;
 
-//============================================================================================================================
 
     public void enterValidProductNameInSearchBoxFunctionality(String productName) {
         enterValidProductNameInSearchBox.clear();
         enterValueOnElement(enterValidProductNameInSearchBox, productName);
     }
-
     public void clickSearchButtonFunctionality() {
         clickOnElement(clickOnSearchButton);
 
     }
-
     //    public void searchResultDisplayed(String expectedKeyWord) {
 //        String actualSearchKeyword = verifySearchProduct.getText();
 //        System.out.println("Actual Text: " + actualSearchKeyword);
@@ -81,4 +88,22 @@ public class SearchBox extends WebTestBase {
         clickOnElement(clickOnGoButton);
 
     }
+    //=====================================================================================================
+    public void clickOnAllDropDownListMenu(){
+        clickOnElement(userShouldBeAbleToClickOnAllDropDownList);
+    }
+    public void clickOnAlexaSkillsLink(){
+        clickOnElement(userShouldBeAbleToClickOnAlexaSkillsLink);
+    }
+    public void HoverTheMouseOnFeaturesAndSkillsLink(){
+        mouseHoverByXpath("//a[normalize-space()='Features and Skills']");
+
+    }
+    public void userCanSelectEntertainmentFromTheList(){
+        clickOnElement(userCanSelectEntertainmentFromTheList);
+    }
+
+
+
+
 }
