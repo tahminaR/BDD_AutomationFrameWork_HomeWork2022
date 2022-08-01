@@ -1,7 +1,55 @@
 
 @RegressionTest
-Scenario: SearchBox functionality should work with a valid product name # src/test/java/features/SearchBox.feature:7
-  Given user is landed on amazon homepage                               # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
-  And user should be able to enter valid product name                   # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValidProductName()
-  When user should be able to click on search button                    # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
-  Then user should see the valid product appears                        # stepdefinitions.SearchBoxSteps.userShouldSeeTheValidProductAppears()
+Scenario Outline: checking Amazon search box functionality using valid products name # src/test/java/features/SearchBox.feature:32
+  Given user is landed on amazon homepage                                            # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
+  And user should be able to enter valid "Bluetooth earbuds"                         # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValid(java.lang.String)
+  And user should be able to click on search button                                  # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
+  And user should be able to click on Free Shipping by Amazon                        # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnFreeShippingByAmazon()
+  And user should be able to enter Minimum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMinimumPriceInPriceEditField()
+  And user should be able to enter Maximum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMaximumPriceInPriceEditField()
+  When users should be able to click on Go button                                    # stepdefinitions.SearchBoxSteps.usersShouldBeAbleToClickOnGoButton()
+  Then users should able to see "Bluetooth earbuds" displayed                        # stepdefinitions.SearchBoxSteps.usersShouldAbleToSeeDisplayed(java.lang.String)
+
+@RegressionTest
+Scenario Outline: checking Amazon search box functionality using valid products name # src/test/java/features/SearchBox.feature:33
+  Given user is landed on amazon homepage                                            # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
+  And user should be able to enter valid "air purifier"                              # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValid(java.lang.String)
+  And user should be able to click on search button                                  # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
+  And user should be able to click on Free Shipping by Amazon                        # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnFreeShippingByAmazon()
+  And user should be able to enter Minimum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMinimumPriceInPriceEditField()
+  And user should be able to enter Maximum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMaximumPriceInPriceEditField()
+  When users should be able to click on Go button                                    # stepdefinitions.SearchBoxSteps.usersShouldBeAbleToClickOnGoButton()
+  Then users should able to see "air purifier" displayed                             # stepdefinitions.SearchBoxSteps.usersShouldAbleToSeeDisplayed(java.lang.String)
+
+@RegressionTest
+Scenario Outline: checking Amazon search box functionality using valid products name # src/test/java/features/SearchBox.feature:34
+  Given user is landed on amazon homepage                                            # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
+  And user should be able to enter valid "Coffee Gator Espresso Machine"             # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValid(java.lang.String)
+  And user should be able to click on search button                                  # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
+  And user should be able to click on Free Shipping by Amazon                        # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnFreeShippingByAmazon()
+  And user should be able to enter Minimum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMinimumPriceInPriceEditField()
+  And user should be able to enter Maximum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMaximumPriceInPriceEditField()
+  When users should be able to click on Go button                                    # stepdefinitions.SearchBoxSteps.usersShouldBeAbleToClickOnGoButton()
+  Then users should able to see "Coffee Gator Espresso Machine" displayed            # stepdefinitions.SearchBoxSteps.usersShouldAbleToSeeDisplayed(java.lang.String)
+
+@RegressionTest
+Scenario Outline: checking Amazon search box functionality using valid products name # src/test/java/features/SearchBox.feature:35
+  Given user is landed on amazon homepage                                            # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
+  And user should be able to enter valid "airpods pro case"                          # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValid(java.lang.String)
+  And user should be able to click on search button                                  # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
+  And user should be able to click on Free Shipping by Amazon                        # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnFreeShippingByAmazon()
+  And user should be able to enter Minimum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMinimumPriceInPriceEditField()
+  And user should be able to enter Maximum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMaximumPriceInPriceEditField()
+  When users should be able to click on Go button                                    # stepdefinitions.SearchBoxSteps.usersShouldBeAbleToClickOnGoButton()
+  Then users should able to see "airpods pro case" displayed                         # stepdefinitions.SearchBoxSteps.usersShouldAbleToSeeDisplayed(java.lang.String)
+
+@RegressionTest
+Scenario Outline: checking Amazon search box functionality using valid products name # src/test/java/features/SearchBox.feature:36
+  Given user is landed on amazon homepage                                            # stepdefinitions.SearchBoxSteps.user_is_landed_on_amazon_homepage()
+  And user should be able to enter valid "speaker home theater system"               # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterValid(java.lang.String)
+  And user should be able to click on search button                                  # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnSearchButton()
+  And user should be able to click on Free Shipping by Amazon                        # stepdefinitions.SearchBoxSteps.userShouldBeAbleToClickOnFreeShippingByAmazon()
+  And user should be able to enter Minimum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMinimumPriceInPriceEditField()
+  And user should be able to enter Maximum price in price edit field                 # stepdefinitions.SearchBoxSteps.userShouldBeAbleToEnterMaximumPriceInPriceEditField()
+  When users should be able to click on Go button                                    # stepdefinitions.SearchBoxSteps.usersShouldBeAbleToClickOnGoButton()
+  Then users should able to see "speaker home theater system" displayed              # stepdefinitions.SearchBoxSteps.usersShouldAbleToSeeDisplayed(java.lang.String)

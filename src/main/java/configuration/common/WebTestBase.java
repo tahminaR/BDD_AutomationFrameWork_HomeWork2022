@@ -35,8 +35,8 @@ public class WebTestBase {
     public static WebDriver driver;
     static Properties readProperty = ReadPropertiesFrom.loadProperties("src/main/resources/Config.properties");
     public static final String BROWSERSTACK_URL = "https://" + readProperty.getProperty("BROWSERSTACK_USERNAME") + ":" + readProperty.getProperty("BROWSERSTACK_ACCESS_KEY") + "@hub-cloud.browserstack.com/wd/hub";
-    public static final String SAUCELABS_USERNAME = "xodale3453";
-    public static final String SAUCELABS_ACCESS_KEY = "8f00028a-cb82-46e2-a137-263a99a0ca08";
+    public static final String SAUCELABS_USERNAME = "tahminarashid_gW1JMB";
+    public static final String SAUCELABS_ACCESS_KEY = "QKnobsFes6WqXjJnvoZa";
     public static final String SAUCELABS_URL = "https://" + SAUCELABS_USERNAME + ":" + SAUCELABS_ACCESS_KEY + "@ondemand.us-west-1.saucelabs.com:443/wd/hub";
 
     protected String getStackTrace(Throwable t) {
